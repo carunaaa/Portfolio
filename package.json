@@ -1,12 +1,13 @@
 {
   "name": "portfolio",
-  "homepage": "https://carunaaa.github.io/Portfolio",
+  "homepage": "https://carunaaa.github.io/Portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "predeploy": "npm run build",
+    "build": "tsc && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
