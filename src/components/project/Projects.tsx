@@ -1,10 +1,20 @@
 import React, { useState } from "react";
+import ramroImage from '../../assets/ramro1.png';
+import ramroImage1 from '../../assets/ramro2.png';
+import ramroImage2 from '../../assets/ramro3.png';
+import ramroImage3 from '../../assets/ramro4.png';
+import o1dd1 from '../../assets/o1dd1.png';
+import o1dd2 from '../../assets/o1dd2.png';
+import o1dd3 from '../../assets/o1dd3.jpg';
+import o1dd4 from '../../assets/o1dd4.jpg';
+import o1dd5 from '../../assets/o1dd5.jpg';
+import o1dd6 from '../../assets/o1dd6.jpg';
 
 interface Project {
   name: string;
   description: string;
   link: string;
-  image: string;
+  images: string[]; 
 }
 
 const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
@@ -13,32 +23,32 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
   const projects: Project[] = [
     {
-      name: "Project One",
+      name: "RamroDesigns",
       description:
         "A React web app built for user interactivity and dynamic content.",
-      link: "https://example.com",
-      image: "https://via.placeholder.com/600x400",
+      link: "https://ramrodesigns.com/beta/",
+      images: [ramroImage, ramroImage1, ramroImage2, ramroImage3], 
     },
     {
-      name: "Project Two",
-      description:
-        "A Node.js API with RESTful services and JWT authentication.",
-      link: "https://example.com",
-      image: "https://via.placeholder.com/600x400",
-    },
-    {
-      name: "Project Three",
+      name: "Only 1Dollar Design Website",
       description:
         "A UI/UX redesign of an existing application with modern standards.",
-      link: "https://example.com",
-      image: "https://via.placeholder.com/600x400",
+      link: "https://only1dollardesign.com/",
+      images: [o1dd1, o1dd2],
     },
     {
-      name: "Project Four",
+      name: "Only 1Dollar Design Mobile App",
+      description:
+        "An E-commerce platform built with a focus on seamless user experience.",
+      link: "https://apps.apple.com/sb/app/only1dollardesign/id6478212180",
+      images: [o1dd5,o1dd3, o1dd4,o1dd6],
+    },
+    {
+      name: "GoldSage",
       description:
         "An E-commerce platform built with a focus on seamless user experience.",
       link: "https://example.com",
-      image: "https://via.placeholder.com/600x400",
+      images: ["https://via.placeholder.com/600x400", "https://via.placeholder.com/600x400"],
     },
   ];
 
@@ -84,7 +94,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
               <p
                 className={`text-lg mt-2 ${
                   isDarkMode ? "text-gray-400" : "text-gray-700"
-                } group-hover:text-gray-300`}
+                } group-hover:text-gray-600`}
               >
                 {project.description}
               </p>
@@ -115,7 +125,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
           aria-hidden="true"
         >
           <div
-            className={`bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full h-full md:h-auto transform transition-all duration-300 ease-in-out scale-95 group-hover:scale-100 overflow-auto ${
+            className={`bg-white p-8 rounded-lg shadow-lg w-full sm:w-11/12 md:w-9/12 lg:w-8/12 xl:w-7/12 max-w-4xl transform transition-all duration-300 ease-in-out scale-95 group-hover:scale-100 overflow-auto ${
               isDarkMode ? "bg-gray-800 text-white" : "bg-white text-gray-900"
             }`}
             onClick={(e) => e.stopPropagation()} 
@@ -123,6 +133,15 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
             aria-labelledby="modalTitle"
             aria-describedby="modalDescription"
           >
+            {/* Close Button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-3xl text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-400"
+              aria-label="Close modal"
+            >
+              &times;
+            </button>
+
             <h3
               id="modalTitle"
               className="text-3xl font-semibold mb-4"
@@ -137,30 +156,25 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
             </p>
 
             {/* Image Section */}
-            <div className="mb-6">
-              <img
-                src={selectedProject?.image}
-                alt={selectedProject?.name}
-                className="w-full h-auto rounded-lg shadow-xl mb-6"
-              />
+            <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[80vh] overflow-y-auto">
+              {selectedProject?.images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`${selectedProject?.name} image ${index + 1}`}
+                  className="w-full h-auto rounded-lg shadow-xl"
+                />
+              ))}
             </div>
 
             <a
               href={selectedProject?.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300"
+              className="bg-orange-600 text-white py-3 px-6 rounded-lg hover:bg-orange-700 transition-all duration-300"
             >
               Visit Site
             </a>
-
-            <button
-              onClick={closeModal}
-              className="mt-4 text-red-600 hover:text-red-800 font-medium transition-all duration-300"
-              aria-label="Close modal"
-            >
-              Close
-            </button>
           </div>
         </div>
       )}
