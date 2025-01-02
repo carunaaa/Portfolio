@@ -2,6 +2,7 @@ import { FC } from "react";
 import About from "../about/About";
 import Projects from "../project/Projects";
 import Contact from "../contact/Contact";
+import Skills from "../skills/Skills";
 
 interface HomepageProps {
   isDarkMode: boolean;
@@ -12,6 +13,9 @@ const Homepage: FC<HomepageProps> = ({ isDarkMode }) => {
     <div>
       <section id="home">
         <About isDarkMode={isDarkMode} />
+      </section>
+      <section id="projects">
+        <Skills isDarkMode={isDarkMode} />
       </section>
       <section id="projects">
         <Projects isDarkMode={isDarkMode} />

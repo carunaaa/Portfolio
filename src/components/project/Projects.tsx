@@ -14,7 +14,8 @@ interface Project {
   name: string;
   description: string;
   link: string;
-  images: string[]; 
+  images: string[];
+  technologies: string[]; 
 }
 
 const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
@@ -27,7 +28,8 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
       description:
         "A React web app built for user interactivity and dynamic content.",
       link: "https://ramrodesigns.com/beta/",
-      images: [ramroImage, ramroImage1, ramroImage2, ramroImage3], 
+      images: [ramroImage, ramroImage1, ramroImage2, ramroImage3],
+      technologies: ["React", "Tailwind CSS", "JavaScript"], 
     },
     {
       name: "Only 1Dollar Design Website",
@@ -35,13 +37,15 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
         "A UI/UX redesign of an existing application with modern standards.",
       link: "https://only1dollardesign.com/",
       images: [o1dd1, o1dd2],
+      technologies: ["HTML", "CSS", "JavaScript", "Figma"], 
     },
     {
       name: "Only 1Dollar Design Mobile App",
       description:
         "An E-commerce platform built with a focus on seamless user experience.",
       link: "https://apps.apple.com/sb/app/only1dollardesign/id6478212180",
-      images: [o1dd5,o1dd3, o1dd4,o1dd6],
+      images: [o1dd5, o1dd3, o1dd4, o1dd6],
+      technologies: ["React Native", "Firebase", "JavaScript"], 
     },
     {
       name: "GoldSage",
@@ -49,6 +53,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
         "An E-commerce platform built with a focus on seamless user experience.",
       link: "https://example.com",
       images: ["https://via.placeholder.com/600x400", "https://via.placeholder.com/600x400"],
+      technologies: ["Vue.js", "Node.js", "MongoDB"], 
     },
   ];
 
@@ -98,6 +103,19 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
               >
                 {project.description}
               </p>
+              {/* Display technology tags */}
+              <div className="mt-2">
+                {project.technologies.map((tech, index) => (
+                  <span
+                    key={index}
+                    className={`inline-block bg-gray-200 text-sm rounded-full px-3 py-1 mr-2 mb-2 ${
+                      isDarkMode ? "text-white bg-gray-700" : "text-gray-800 bg-gray-300"
+                    }`}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
             <a
               href={project.link}
