@@ -15,21 +15,21 @@ const Contact: React.FC = () => {
         {/* Social Links */}
         <div className="space-x-6 flex justify-center items-center mb-8">
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:karunadevkota101@gmail.com"
             className="text-white text-lg font-medium  py-2 px-4 rounded-lg"
           >
             Email
           </a>
-          <a
+          {/* <a
             href="https://www.linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-lg font-medium  py-2 px-4 rounded-lg"
           >
             LinkedIn
-          </a>
+          </a> */}
           <a
-            href="https://github.com"
+            href="https://github.com/carunaaa"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-lg font-medium  py-2 px-4 rounded-lg"

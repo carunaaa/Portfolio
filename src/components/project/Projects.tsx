@@ -61,7 +61,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
       name: "Coffee Shop Website",
       description:
         "A personal project where I created a responsive coffee shop website using Tailwind CSS, focusing on clean, minimalistic UI/UX design. The project helped me enhance my skills in Tailwind, HTML, and web design, with a mobile-optimized layout, smooth navigation, and a professional aesthetic for an elevated user experience.",
-      link: "https://carunaaa.github.io/Tailwind/",
+      link: "https://carunaaa.github.io/kye/",
       images: [coffee],
       technologies: ["HTML", "Tailwind"],
     },
@@ -79,7 +79,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
 
   return (
     <section
-      className={`py-16 ${
+      className={`p-16 ${
         isDarkMode
           ? "bg-gradient-to-r from-gray-900 to-gray-700"
           : "bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50"

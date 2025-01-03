@@ -22,7 +22,7 @@ const App: React.FC = () => {
   return (
     <div>
       <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-      <main className="p-4">
+      <main >
         <Homepage isDarkMode={isDarkMode} /> 
       </main>
     </div>

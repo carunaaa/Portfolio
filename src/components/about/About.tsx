@@ -41,7 +41,7 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
         <img
           src={bg}
           alt="Karuna"
-          className="w-[30rem] sm:w-[20rem] md:w-[35rem] h-auto object-cover rounded-3xl shadow-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-xl"
+          className="w-[30rem] sm:w-[20rem] md:w-[32rem] h-auto object-cover rounded-3xl shadow-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-xl"
         />
       </div>
     </section>
