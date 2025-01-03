@@ -25,7 +25,7 @@ const Skills: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
         Skills
       </h2>
       
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 max-w-7xl">
         {/* Skill Cards */}
         <SkillCard
           skillName="HTML"

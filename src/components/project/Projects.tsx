@@ -5,10 +5,11 @@ import ramroImage2 from '../../assets/ramro3.png';
 import ramroImage3 from '../../assets/ramro4.png';
 import o1dd1 from '../../assets/o1dd1.png';
 import o1dd2 from '../../assets/o1dd2.png';
-import o1dd3 from '../../assets/o1dd3.jpg';
-import o1dd4 from '../../assets/o1dd4.jpg';
-import o1dd5 from '../../assets/o1dd5.jpg';
-import o1dd6 from '../../assets/o1dd6.jpg';
+// import o1dd3 from '../../assets/o1dd3.jpg';
+// import o1dd4 from '../../assets/o1dd4.jpg';
+// import o1dd5 from '../../assets/o1dd5.jpg';
+// import o1dd6 from '../../assets/o1dd6.jpg';
+import dollar from '../../assets/1dollar.png';
 
 interface Project {
   name: string;
@@ -27,7 +28,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
       name: "RamroDesigns",
       description:
         "A React web app built for user interactivity and dynamic content.",
-      link: "https://ramrodesigns.com/beta/",
+      link: "https://ramrodesigns.com",
       images: [ramroImage, ramroImage1, ramroImage2, ramroImage3],
       technologies: ["React", "Tailwind CSS", "JavaScript"], 
     },
@@ -44,7 +45,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
       description:
         "An E-commerce platform built with a focus on seamless user experience.",
       link: "https://apps.apple.com/sb/app/only1dollardesign/id6478212180",
-      images: [o1dd5, o1dd3, o1dd4, o1dd6],
+      images: [dollar],
       technologies: ["React Native", "Firebase", "JavaScript"], 
     },
     {
