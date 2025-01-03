@@ -1,22 +1,20 @@
 import React, { useState } from "react";
-import ramroImage from '../../assets/ramro1.png';
-import ramroImage1 from '../../assets/ramro2.png';
-import ramroImage2 from '../../assets/ramro3.png';
-import ramroImage3 from '../../assets/ramro4.png';
-import o1dd1 from '../../assets/o1dd1.png';
-import o1dd2 from '../../assets/o1dd2.png';
-// import o1dd3 from '../../assets/o1dd3.jpg';
-// import o1dd4 from '../../assets/o1dd4.jpg';
-// import o1dd5 from '../../assets/o1dd5.jpg';
-// import o1dd6 from '../../assets/o1dd6.jpg';
-import dollar from '../../assets/1dollar.png';
+import ramroImage from "../../assets/ramro1.png";
+import ramroImage1 from "../../assets/ramro2.png";
+import ramroImage2 from "../../assets/ramro3.png";
+import ramroImage3 from "../../assets/ramro4.png";
+import o1dd1 from "../../assets/o1dd1.png";
+import o1dd2 from "../../assets/o1dd2.png";
+import dollar from "../../assets/1dollar.png";
+import dollar2 from "../../assets/1dollar2.png";
+import coffee from "../../assets/coffee.png";
 
 interface Project {
   name: string;
   description: string;
   link: string;
   images: string[];
-  technologies: string[]; 
+  technologies: string[];
 }
 
 const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
@@ -27,34 +25,45 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
     {
       name: "RamroDesigns",
       description:
-        "A React web app built for user interactivity and dynamic content.",
+        "RamroDesigns is an interactive web app for Alternative Technology, built with React and Redux for dynamic UI and efficient state management. It pulls real-time data through external APIs, focusing on performance, scalability, and global user engagement.",
       link: "https://ramrodesigns.com",
       images: [ramroImage, ramroImage1, ramroImage2, ramroImage3],
-      technologies: ["React", "Tailwind CSS", "JavaScript"], 
+      technologies: ["React", "Tailwind", "CSS", "JavaScript", "Redux"],
     },
     {
       name: "Only 1Dollar Design Website",
       description:
-        "A UI/UX redesign of an existing application with modern standards.",
+       "Only 1Dollar Design Website is a UI/UX redesign that offers a sleek, responsive experience. It focuses on enhancing usability and performance with a modern, visually appealing interface, providing an intuitive and engaging user experience.",
       link: "https://only1dollardesign.com/",
       images: [o1dd1, o1dd2],
-      technologies: ["HTML", "CSS", "JavaScript", "Figma"], 
+      technologies: ["React", "CSS", "JavaScript"],
     },
     {
       name: "Only 1Dollar Design Mobile App",
       description:
-        "An E-commerce platform built with a focus on seamless user experience.",
+        "This internship project for Alternative Technology is an e-commerce platform built with Flutter, offering a seamless, responsive experience. Using Shared Preferences for efficient data storage, the app features a modern UI/UX design from Figma for a user-friendly interface.",
       link: "https://apps.apple.com/sb/app/only1dollardesign/id6478212180",
-      images: [dollar],
-      technologies: ["React Native", "Firebase", "JavaScript"], 
+      images: [dollar, dollar2],
+      technologies: ["Flutter", "Figma"],
     },
     {
       name: "GoldSage",
       description:
-        "An E-commerce platform built with a focus on seamless user experience.",
-      link: "https://example.com",
-      images: ["https://via.placeholder.com/600x400", "https://via.placeholder.com/600x400"],
-      technologies: ["Vue.js", "Node.js", "MongoDB"], 
+        "GoldSage is an undergraduate project that predicts gold prices for the upcoming year using a hybrid LSTM-CNN model. Combining Long Short-Term Memory (LSTM) for temporal dependencies and Convolutional Neural Networks (CNN) for capturing spatial and complex patterns in historical data, the model improves prediction accuracy.",
+      link: "https://github.com/carunaaa/GoldSage",
+      images: [
+        "https://via.placeholder.com/600x400",
+        "https://via.placeholder.com/600x400",
+      ],
+      technologies: ["Python", "Streamlit"],
+    },
+    {
+      name: "Coffee Shop Website",
+      description:
+        "A personal project where I created a responsive coffee shop website using Tailwind CSS, focusing on clean, minimalistic UI/UX design. The project helped me enhance my skills in Tailwind, HTML, and web design, with a mobile-optimized layout, smooth navigation, and a professional aesthetic for an elevated user experience.",
+      link: "https://carunaaa.github.io/Tailwind/",
+      images: [coffee],
+      technologies: ["HTML", "Tailwind"],
     },
   ];
 
@@ -71,7 +80,9 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
   return (
     <section
       className={`py-16 ${
-        isDarkMode ? "bg-gradient-to-r from-gray-900 to-gray-700" : "bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50"
+        isDarkMode
+          ? "bg-gradient-to-r from-gray-900 to-gray-700"
+          : "bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50"
       }`}
     >
       <h2 className="text-4xl sm:text-5xl font-extrabold text-center text-gray-800 dark:text-white mb-12">
@@ -83,7 +94,9 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
           <div
             key={index}
             className={`group relative border p-6 rounded-xl shadow-lg ${
-              isDarkMode ? "bg-gray-800 border-gray-700" : "bg-white border-gray-300"
+              isDarkMode
+                ? "bg-gray-800 border-gray-700"
+                : "bg-white border-gray-300"
             } hover:bg-gray-100 dark:hover:bg-gray-900 transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer`}
             onClick={() => openModal(project)}
             role="button"
@@ -110,7 +123,9 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
                   <span
                     key={index}
                     className={`inline-block bg-gray-200 text-sm rounded-full px-3 py-1 mr-2 mb-2 ${
-                      isDarkMode ? "text-white bg-gray-700" : "text-gray-800 bg-gray-300"
+                      isDarkMode
+                        ? "text-white bg-gray-700"
+                        : "text-gray-800 bg-gray-300"
                     }`}
                   >
                     {tech}
@@ -140,14 +155,14 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
       {isModalOpen && selectedProject && (
         <div
           className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 transition-all duration-300"
-          onClick={closeModal} 
+          onClick={closeModal}
           aria-hidden="true"
         >
           <div
             className={`bg-white p-8 rounded-lg shadow-lg w-full sm:w-11/12 md:w-9/12 lg:w-8/12 xl:w-7/12 max-w-4xl transform transition-all duration-300 ease-in-out scale-95 group-hover:scale-100 overflow-auto ${
               isDarkMode ? "bg-gray-800 text-white" : "bg-white text-gray-900"
             }`}
-            onClick={(e) => e.stopPropagation()} 
+            onClick={(e) => e.stopPropagation()}
             role="dialog"
             aria-labelledby="modalTitle"
             aria-describedby="modalDescription"
@@ -161,16 +176,10 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
               &times;
             </button>
 
-            <h3
-              id="modalTitle"
-              className="text-3xl font-semibold mb-4"
-            >
+            <h3 id="modalTitle" className="text-3xl font-semibold mb-4">
               {selectedProject?.name}
             </h3>
-            <p
-              id="modalDescription"
-              className="text-lg mb-4"
-            >
+            <p id="modalDescription" className="text-lg mb-4">
               {selectedProject?.description}
             </p>
 
