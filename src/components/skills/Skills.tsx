@@ -12,6 +12,8 @@ import illustrator from "../../assets/illustrator.png";
 import figma from "../../assets/figma.png";
 import git from "../../assets/git.png";
 import python from "../../assets/python.png";
+import mongodb from "../../assets/mongodb.png";
+import mysql from "../../assets/mysql.png";
 
 
 const Skills: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
@@ -25,7 +27,7 @@ const Skills: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
         Skills
       </h2>
       
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 max-w-7xl">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-8 max-w-7xl">
         {/* Skill Cards */}
         <SkillCard
           skillName="HTML"
@@ -98,6 +100,18 @@ const Skills: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
           level={55}
           isDarkMode={isDarkMode}
           imageUrl={python}
+        />
+        <SkillCard
+          skillName="MongoDB"
+          level={90}
+          isDarkMode={isDarkMode}
+          imageUrl={mongodb}
+        />
+        <SkillCard
+          skillName="MySql"
+          level={85}
+          isDarkMode={isDarkMode}
+          imageUrl={mysql}
         />
       </div>
     </div>

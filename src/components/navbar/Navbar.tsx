@@ -55,13 +55,22 @@ const Navbar: FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
             </button>
           </div>
           <ul className="flex flex-col items-center mt-16 font-mono text-red-500 text-2xl">
-            <li className="p-4 cursor-pointer hover:underline" onClick={closeMenu}>
+            <li
+              className="p-4 cursor-pointer hover:underline"
+              onClick={closeMenu}
+            >
               <a href="#home">Home</a>
             </li>
-            <li className="p-4 cursor-pointer hover:underline" onClick={closeMenu}>
+            <li
+              className="p-4 cursor-pointer hover:underline"
+              onClick={closeMenu}
+            >
               <a href="#projects">Projects</a>
             </li>
-            <li className="p-4 cursor-pointer hover:underline" onClick={closeMenu}>
+            <li
+              className="p-4 cursor-pointer hover:underline"
+              onClick={closeMenu}
+            >
               <a href="#contact">Contact</a>
             </li>
           </ul>
