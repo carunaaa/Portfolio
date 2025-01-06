@@ -12,6 +12,9 @@ import goldsage1 from "../../assets/goldsage1.png";
 import goldsage2 from "../../assets/goldsage2.png";
 import goldsage3 from "../../assets/goldsage3.png";
 import goldsage4 from "../../assets/goldsage4.png";
+import coffee2 from "../../assets/coffee2.png";
+import coffee3 from "../../assets/coffee3.png";
+import coffee4 from "../../assets/coffee4.png";
 
 interface Project {
   name: string;
@@ -63,7 +66,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
       description:
         "A personal project where I created a responsive coffee shop website using Tailwind CSS, focusing on clean, minimalistic UI/UX design. The project helped me enhance my skills in Tailwind, HTML, and web design, with a mobile-optimized layout, smooth navigation, and a professional aesthetic for an elevated user experience.",
       link: "https://carunaaa.github.io/kye/",
-      images: [coffee],
+      images: [coffee, coffee2, coffee3, coffee4],
       technologies: ["HTML", "Tailwind"],
     },
   ];

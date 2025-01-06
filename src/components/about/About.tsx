@@ -8,7 +8,7 @@ interface AboutProps {
 const About: React.FC<AboutProps> = ({ isDarkMode }) => {
   return (
     <section
-      className={`h-screen flex flex-col sm:flex-row justify-center items-center text-center px-6 py-16 mt-14
+      className={`min-h-screen flex flex-col sm:flex-row justify-center items-center text-center px-6 py-16 mt-14
         ${
           isDarkMode
             ? "bg-gradient-to-r from-gray-800 via-gray-900 to-black"
@@ -17,7 +17,7 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
     >
       {/* Text Section */}
       <div className="text-content w-full sm:w-1/2 mb-8 sm:mb-0 text-white">
-        <h2 className="text-4xl sm:text-5xl font-extrabold tracking-wide leading-tight">
+        <h2 className="text-4xl sm:text-5xl font-extrabold tracking-wide leading-tight mt-12 md:mt-0">
           Hi! I'm Karuna
         </h2>
         <p className="mt-4 text-lg sm:text-xl font-light max-w-3xl mx-auto opacity-90">

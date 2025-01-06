@@ -20,7 +20,7 @@ const Navbar: FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 p-4 bg-fall-100 dark:bg-fall-900 shadow-lg">
       <div className="flex items-center justify-between relative">
-        <div className="text-4xl text-fall-900 dark:text-fall-50 tracking-wider">
+        <div className="text-4xl text-gray-800 dark:text-fall-50 tracking-wider font-extrabold">
           <h1>k.</h1>
         </div>
 
@@ -55,13 +55,22 @@ const Navbar: FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
             </button>
           </div>
           <ul className="flex flex-col items-center mt-16 font-mono text-red-500 text-2xl">
-            <li className="p-4 cursor-pointer hover:underline" onClick={closeMenu}>
+            <li
+              className="p-4 cursor-pointer hover:underline"
+              onClick={closeMenu}
+            >
               <a href="#home">Home</a>
             </li>
-            <li className="p-4 cursor-pointer hover:underline" onClick={closeMenu}>
+            <li
+              className="p-4 cursor-pointer hover:underline"
+              onClick={closeMenu}
+            >
               <a href="#projects">Projects</a>
             </li>
-            <li className="p-4 cursor-pointer hover:underline" onClick={closeMenu}>
+            <li
+              className="p-4 cursor-pointer hover:underline"
+              onClick={closeMenu}
+            >
               <a href="#contact">Contact</a>
             </li>
           </ul>
