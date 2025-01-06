@@ -2,7 +2,7 @@ import React from "react";
 import bg from "../../assets/IMG_0308.png";
 
 interface AboutProps {
-  isDarkMode: boolean; 
+  isDarkMode: boolean;
 }
 
 const About: React.FC<AboutProps> = ({ isDarkMode }) => {
@@ -28,7 +28,7 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
         </p>
 
         <a
-          href="../../assets/CV - KARUNA.pdf"
+          href="/CV - KARUNA.pdf"
           download
           className="inline-block mt-6 px-8 py-2 bg-orange-600 text-white font-semibold text-lg rounded-lg shadow-lg hover:bg-orange-700 transition-all duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
         >
