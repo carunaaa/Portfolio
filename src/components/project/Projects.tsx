@@ -8,6 +8,10 @@ import o1dd2 from "../../assets/o1dd2.png";
 import dollar from "../../assets/1dollar.png";
 import dollar2 from "../../assets/1dollar2.png";
 import coffee from "../../assets/coffee.png";
+import goldsage1 from "../../assets/goldsage1.png";
+import goldsage2 from "../../assets/goldsage2.png";
+import goldsage3 from "../../assets/goldsage3.png";
+import goldsage4 from "../../assets/goldsage4.png";
 
 interface Project {
   name: string;
@@ -33,7 +37,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
     {
       name: "Only 1Dollar Design Website",
       description:
-       "Only 1Dollar Design Website is a UI/UX redesign that offers a sleek, responsive experience. It focuses on enhancing usability and performance with a modern, visually appealing interface, providing an intuitive and engaging user experience.",
+        "Only 1Dollar Design Website is a UI/UX redesign that offers a sleek, responsive experience. It focuses on enhancing usability and performance with a modern, visually appealing interface, providing an intuitive and engaging user experience.",
       link: "https://only1dollardesign.com/",
       images: [o1dd1, o1dd2],
       technologies: ["React", "CSS", "JavaScript"],
@@ -51,10 +55,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
       description:
         "GoldSage is an undergraduate project that predicts gold prices for the upcoming year using a hybrid LSTM-CNN model. Combining Long Short-Term Memory (LSTM) for temporal dependencies and Convolutional Neural Networks (CNN) for capturing spatial and complex patterns in historical data, the model improves prediction accuracy.",
       link: "https://github.com/carunaaa/GoldSage",
-      images: [
-        "https://via.placeholder.com/600x400",
-        "https://via.placeholder.com/600x400",
-      ],
+      images: [ goldsage4, goldsage1, goldsage2, goldsage3],
       technologies: ["Python", "Streamlit"],
     },
     {
