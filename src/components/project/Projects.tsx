@@ -58,7 +58,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
       description:
         "GoldSage is an undergraduate project that predicts gold prices for the upcoming year using a hybrid LSTM-CNN model. Combining Long Short-Term Memory (LSTM) for temporal dependencies and Convolutional Neural Networks (CNN) for capturing spatial and complex patterns in historical data, the model improves prediction accuracy.",
       link: "https://github.com/carunaaa/GoldSage",
-      images: [ goldsage4, goldsage1, goldsage2, goldsage3],
+      images: [goldsage4, goldsage1, goldsage2, goldsage3],
       technologies: ["Python", "Streamlit"],
     },
     {
@@ -121,7 +121,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
               >
                 {project.description}
               </p>
-              {/* Display technology tags */}
+
               <div className="mt-2">
                 {project.technologies.map((tech, index) => (
                   <span
@@ -164,7 +164,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
         >
           <div
             className={`bg-white p-8 rounded-lg shadow-lg w-full sm:w-11/12 md:w-9/12 lg:w-8/12 xl:w-7/12 max-w-4xl transform transition-all duration-300 ease-in-out scale-95 group-hover:scale-100 overflow-auto ${
-              isDarkMode ? "bg-gray-800 text-white" : "bg-white text-gray-900"
+              isDarkMode ? "bg-slate-900 text-white" : "bg-white text-gray-900"
             }`}
             onClick={(e) => e.stopPropagation()}
             role="dialog"

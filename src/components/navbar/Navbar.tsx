@@ -28,7 +28,7 @@ const Navbar: FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
         <div className="absolute left-1/2 transform -translate-x-1/2">
           <button
             className="transition-all transform hover:scale-125 focus:outline-none"
-            onClick={toggleTheme} // Call toggleTheme passed as a prop
+            onClick={toggleTheme} 
             aria-label="Toggle Theme"
           >
             <span className="text-3xl transition-all">

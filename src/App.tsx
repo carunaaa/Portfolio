@@ -5,12 +5,10 @@ import Homepage from "./components/homepage/Homepage";
 const App: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
-  // Toggle the dark theme
   const toggleTheme = () => {
     setIsDarkMode((prev) => !prev);
   };
 
-  // Apply the theme to the body on mount
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add("dark");
