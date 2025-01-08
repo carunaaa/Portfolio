@@ -164,7 +164,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
         >
           <div
             className={`bg-white p-8 rounded-lg shadow-lg w-full sm:w-11/12 md:w-9/12 lg:w-8/12 xl:w-7/12 max-w-4xl transform transition-all duration-300 ease-in-out scale-95 group-hover:scale-100 overflow-auto ${
-              isDarkMode ? "bg-[#001d3d] text-white" : "bg-white text-gray-900"
+              isDarkMode ? "bg-red-800 text-white" : "bg-white text-gray-900"
             }`}
             onClick={(e) => e.stopPropagation()}
             role="dialog"
