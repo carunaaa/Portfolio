@@ -28,7 +28,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
       </div>
       <h3
         className={`text-xl font-semibold ${
-          isDarkMode ? "text-white" : "text-gray-800"
+          isDarkMode ? "text-gray-800" : "text-gray-800"
         }`}
       >
         {skillName}
