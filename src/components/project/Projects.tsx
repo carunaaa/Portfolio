@@ -5,6 +5,8 @@ import ramroImage2 from "../../assets/ramro3.png";
 import ramroImage3 from "../../assets/ramro4.png";
 import o1dd1 from "../../assets/o1dd1.png";
 import o1dd2 from "../../assets/o1dd2.png";
+import o1dd3 from "../../assets/o1dd3.png";
+import o1dd4 from "../../assets/o1dd4.png";
 import dollar from "../../assets/1dollar.png";
 import dollar2 from "../../assets/1dollar2.png";
 import coffee from "../../assets/coffee.png";
@@ -42,7 +44,7 @@ const Projects: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => {
       description:
         "Only 1Dollar Design Website is a UI/UX redesign that offers a sleek, responsive experience. It focuses on enhancing usability and performance with a modern, visually appealing interface, providing an intuitive and engaging user experience.",
       link: "https://only1dollardesign.com/",
-      images: [o1dd1, o1dd2],
+      images: [o1dd1, o1dd3, o1dd2, o1dd4],
       technologies: ["React", "CSS", "JavaScript"],
     },
     {
